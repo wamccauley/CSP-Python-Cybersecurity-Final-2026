@@ -6,21 +6,53 @@
 ║  Date:  _______________________________________________      ║
 ╚══════════════════════════════════════════════════════════════╝
 
-INSTRUCTIONS:
-  - Complete ALL sections below.
-  - Replace every  # YOUR CODE HERE  comment with working code.
-  - Do NOT delete any existing code, only ADD your code.
-  - Run this file to check your output before submitting.
-  - Each section has a point value shown in the header.
+GITHUB CLASSROOM INSTRUCTIONS:
+  1. This assignment was distributed via GitHub Classroom.
+     You should already have your own personal copy of this
+     repository created automatically when you accepted the
+     assignment link from your teacher.
+
+  2. Complete ALL sections in this file.
+     Replace every  # YOUR CODE HERE  comment with working code.
+     Do NOT delete any existing code — only ADD your code.
+
+  3. Run this file to check your output:
+       python final_exam.py
+     Fix any errors before submitting.
+
+  4. Submit by committing and pushing this file to YOUR
+     GitHub Classroom repository. Your teacher will see it
+     automatically — no email or separate submission needed.
+
+  5. Verify: Visit your repo on GitHub and confirm
+     final/final_exam.py shows your completed code.
 
 SCORING:
-  Section 1 - Python Basics             [20 pts]
-  Section 2 - File I/O                  [20 pts]
-  Section 3 - Caesar Cipher             [20 pts]
-  Section 4 - Password Checker          [20 pts]
-  Section 5 - File System & Log Reader  [20 pts]
+  Section 1 - Python Basics             [40 pts]
+    1A. Variables & Output               (10 pts)
+    1B. Grade Calculator Function        (16 pts)
+    1C. List Operations                  (14 pts)
+
+  Section 2 - File I/O                  [40 pts]
+    2A. Write a File                     (20 pts)
+    2B. Read and Search the File         (20 pts)
+
+  Section 3 - Caesar Cipher             [40 pts]
+    3A. Encrypt Function                 (20 pts)
+    3B. Decrypt Function                 (20 pts)
+
+  Section 4 - Password Strength Checker [40 pts]
+    Length Check                          (8 pts)
+    Uppercase Check                       (8 pts)
+    Lowercase Check                       (8 pts)
+    Digit Check                           (8 pts)
+    Special Character Check               (8 pts)
+
+  Section 5 - File System & Log Analysis[40 pts]
+    5A. Build a Folder Structure         (20 pts)
+    5B. Log File Analysis                (20 pts)
   ─────────────────────────────────────────────
-  TOTAL                                 [100 pts]
+  TOTAL                                 [200 pts]
 """
 
 import os
@@ -31,11 +63,11 @@ print("=" * 60)
 
 
 # ════════════════════════════════════════════════════════════
-# SECTION 1 — Python Basics                         [20 pts]
+# SECTION 1 — Python Basics                         [40 pts]
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 1: Python Basics ---")
 
-# ── 1A. Variables [4 pts] ─────────────────────────────────
+# ── 1A. Variables & Output [10 pts] ───────────────────────
 # Create three variables:
 #   student_name  (string)  : your first name
 #   student_grade (integer) : your grade level (9, 10, 11, or 12)
@@ -45,7 +77,7 @@ print("\n--- Section 1: Python Basics ---")
 # YOUR CODE HERE
 
 
-# ── 1B. Grade Calculator [8 pts] ─────────────────────────
+# ── 1B. Grade Calculator [16 pts] ────────────────────────
 # Write a function called letter_grade(score) that takes a
 # numeric score (0-100) and returns the letter grade:
 #   A = 90-100  |  B = 80-89  |  C = 70-79  |  D = 60-69  |  F = <60
@@ -60,7 +92,7 @@ for s in test_scores:
     print(f"  Score {s} -> {letter_grade(s)}")
 
 
-# ── 1C. List Operations [8 pts] ──────────────────────────
+# ── 1C. List Operations [14 pts] ─────────────────────────
 # Given this list of cybersecurity threats:
 threats = ["phishing", "malware", "ransomware", "spyware", "DDoS"]
 
@@ -75,11 +107,11 @@ threats = ["phishing", "malware", "ransomware", "spyware", "DDoS"]
 
 
 # ════════════════════════════════════════════════════════════
-# SECTION 2 — File I/O                              [20 pts]
+# SECTION 2 — File I/O                              [40 pts]
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 2: File I/O ---")
 
-# ── 2A. Write a File [10 pts] ────────────────────────────
+# ── 2A. Write a File [20 pts] ────────────────────────────
 # Create a file called "cyber_glossary.txt" and write the
 # following 5 terms and definitions into it, one per line:
 #
@@ -92,7 +124,7 @@ print("\n--- Section 2: File I/O ---")
 # YOUR CODE HERE
 
 
-# ── 2B. Read and Search the File [10 pts] ────────────────
+# ── 2B. Read and Search the File [20 pts] ────────────────
 # Open "cyber_glossary.txt" and:
 #   1. Print the total number of lines in the file
 #   2. Search for the term "Encryption" and print that line
@@ -101,11 +133,11 @@ print("\n--- Section 2: File I/O ---")
 
 
 # ════════════════════════════════════════════════════════════
-# SECTION 3 — Caesar Cipher                         [20 pts]
+# SECTION 3 — Caesar Cipher                         [40 pts]
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 3: Caesar Cipher ---")
 
-# ── 3A. Encrypt [10 pts] ─────────────────────────────────
+# ── 3A. Encrypt [20 pts] ─────────────────────────────────
 # Write a function encrypt_message(text, shift) that:
 #   - Shifts each LETTER forward by 'shift' positions in the alphabet
 #   - Wraps around (Z + 1 = A)
@@ -119,7 +151,7 @@ def encrypt_message(text, shift):
     pass
 
 
-# ── 3B. Decrypt [10 pts] ─────────────────────────────────
+# ── 3B. Decrypt [20 pts] ─────────────────────────────────
 # Write a function decrypt_message(text, shift) that reverses
 # the encryption. Use your encrypt_message function!
 #
@@ -142,16 +174,16 @@ print(f"  Match: {original == decoded}")
 
 
 # ════════════════════════════════════════════════════════════
-# SECTION 4 — Password Strength Checker             [20 pts]
+# SECTION 4 — Password Strength Checker             [40 pts]
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 4: Password Strength Checker ---")
 
 # Write a function is_strong_password(password) that checks:
-#   ✅ At least 10 characters long                    [4 pts]
-#   ✅ Contains at least one uppercase letter          [4 pts]
-#   ✅ Contains at least one lowercase letter          [4 pts]
-#   ✅ Contains at least one digit (0-9)               [4 pts]
-#   ✅ Contains at least one special char: !@#$%^&*    [4 pts]
+#   ✅ At least 10 characters long                    [8 pts]
+#   ✅ Contains at least one uppercase letter          [8 pts]
+#   ✅ Contains at least one lowercase letter          [8 pts]
+#   ✅ Contains at least one digit (0-9)               [8 pts]
+#   ✅ Contains at least one special char: !@#$%^&*    [8 pts]
 #
 # Return a DICTIONARY with:
 #   "strong": True or False
@@ -188,11 +220,11 @@ for pw in test_passwords:
 
 
 # ════════════════════════════════════════════════════════════
-# SECTION 5 — File System & Log Analysis            [20 pts]
+# SECTION 5 — File System & Log Analysis            [40 pts]
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 5: File System & Log Analysis ---")
 
-# ── 5A. Build a Folder Structure [10 pts] ────────────────
+# ── 5A. Build a Folder Structure [20 pts] ────────────────
 # Use os.makedirs() to create this folder structure:
 #
 #   my_project/
@@ -209,7 +241,7 @@ print("\n--- Section 5: File System & Log Analysis ---")
 # YOUR CODE HERE
 
 
-# ── 5B. Log File Analysis [10 pts] ───────────────────────
+# ── 5B. Log File Analysis [20 pts] ───────────────────────
 # A security log is provided below as a list of strings.
 # Write code that:
 #   1. Counts how many lines contain "SUCCESS"
@@ -234,4 +266,5 @@ security_log = [
 # ════════════════════════════════════════════════════════════
 print("\n" + "=" * 60)
 print("  Final Exam Complete — Review your output above!")
+print("  Remember to commit and push to your GitHub Classroom repo!")
 print("=" * 60)
